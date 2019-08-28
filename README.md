@@ -16,6 +16,10 @@ condition  west1c && north2d
 action     printall
 
 north_high = hcp(north)>18 
-north_dual = shape(north, any 5422 + any 5431 + any 5440 + any 5521 + any 5530 + any 6421 + any 6430 + any 6511 + any 6520 + any 7411 + any 7420)
+north_low = hcp(north)>12 && hcp(north)<16
+north_middle = hcp(north)>15 && hcp(north)<19
+north_balance = shapce(north, any 4333 + any 4432 + any 5332)
+north_semi_balance = shape(north, any 4333 + any 4432 + any 5332 + any 5431 + any 5422)
+north_deal = shape(north, any 5422 + any 5431 + any 5440 + any 5521 + any 5530 + any 6421 + any 6430 + any 6511 + any 6520 + any 7411 + any 7420)
 south_res = hcp(south)>5
-condition north_high && south_res && north_dual
+condition north_high && south_res && north_deal
