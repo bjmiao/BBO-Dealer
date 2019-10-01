@@ -28,7 +28,7 @@ south_res = hcp(south)>5
 north_open = (hcp(north)>11 && hcp(north)<22)
 north_1M = (hearts(north)>=5 || spades(north)>=5)
 
-south_res_2C = hcp(south)>11 && (shape(south , any 4333 + any 4432)) || clubs(south) >= 5)
+south_res_2C = hcp(south)>11 && (shape(south , any 4333 + any 4432) || clubs(south) >= 5)
 south_res_2D = hcp(south)>11 && (diamonds(south) >= 5)
 
 condition north_open && north_1M && (south_res_2C || south_res_2D )
