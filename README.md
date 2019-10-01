@@ -25,8 +25,8 @@ north_semi_balance = shape(north, any 4333 + any 4432 + any 5332 + any 5431 + an
 north_deal = shape(north, any 5422 + any 5431 + any 5440 + any 5521 + any 5530 + any 6421 + any 6430 + any 6511 + any 6520 + any 7411 + any 7420)
 south_res = hcp(south)>5
 
-north_open = hcp(north)>11 && hpc(north) < 22
-north_1M = hearts(north)>=5 || spades(north)>=5
+north_open = (hcp(north)>11 && hcp(north)<22)
+north_1M = (hearts(north)>=5 || spades(north)>=5)
 
 south_res_2C = hcp(south)>11 && (shape(south , any 4333 + any 4432)) || clubs(south) >= 5)
 south_res_2D = hcp(south)>11 && (diamonds(south) >= 5)
